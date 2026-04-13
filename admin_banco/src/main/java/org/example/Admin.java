@@ -16,7 +16,7 @@ public class Admin {
             System.out.println("Esta cuenta esta deshabilitada");
     }
 
-    public void deshabilitarCuenta(Cuenta c){
+    public void habilitarCuenta(Cuenta c){
         if(c.activo){
             c.activo = false;
             System.out.println("Cuenta de " + c.nombre + " deshabilitada.");

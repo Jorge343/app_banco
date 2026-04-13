@@ -10,7 +10,7 @@ public class Cuenta {
 
     public void mostrarInfo(){
         if(activo)
-            System.out.println("Nombre: " + nombre + "Direccion-: " + direccion + "Cuenta: " + tipoCuenta + "Saldo: $" + saldo);
+            System.out.println("Nombre: " + nombre + " Direccion-: " + direccion + " Cuenta: " + tipoCuenta + " Saldo: $" + saldo);
         else
             System.out.println("Esta cuenta no se encuentra activa");
 
