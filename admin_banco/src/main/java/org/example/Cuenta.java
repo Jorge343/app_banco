@@ -28,6 +28,13 @@ public class Cuenta {
 
 
 }
+interface Builder{
+    void reset();
+    void setNombre(String nombre);
+    void setDireccion(String direccion);
+    void setTipo (String tipo);
+}
+
 class CuentaBuilder implements Builder {
     private  Cuenta cuenta;
 
@@ -53,11 +60,5 @@ class CuentaBuilder implements Builder {
     }
 }
 
-interface Builder{
-    void reset();
-    void setNombre(String nombre);
-    void setDireccion(String direccion);
-    void setTipo (String tipo);
 
-}
 

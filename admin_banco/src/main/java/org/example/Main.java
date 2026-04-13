@@ -7,7 +7,7 @@ public class Main {
 
         Director director = new Director();
         CuentaBuilder builder = new CuentaBuilder();
-        Admin admin = new Admin("Hernesto");
+        Admin admin = new Admin("Hector");
 
         director.constructCuentaAhorro(builder, "Juan", "Monteagudo 111");
         Cuenta cuenta1 = builder.getCuenta();
@@ -23,7 +23,7 @@ public class Main {
         cuenta1.mostrarInfo();
         cuenta2.mostrarInfo();
 
-        admin.habilitarCuenta(cuenta1);
+        admin.cambiarCuenta(cuenta1);
         cuenta1.mostrarInfo();
     }
 }
