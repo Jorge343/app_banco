@@ -2,9 +2,11 @@ package org.example;
 
 public class Admin {
     private String nombre;
+    private int dni;
 
-    public Admin(String nombre){
+    public Admin(String nombre, int dni){
         this.nombre = nombre;
+        this.dni = dni
     }
 
     public void modificarSaldo(Cuenta c, double nuevoSaldo){
