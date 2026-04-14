@@ -2,11 +2,13 @@ package org.example;
 
 public class Admin {
     private String nombre;
-    private int dni;
+    private String mail;
+    private String pass;
 
-    public Admin(String nombre, int dni){
+    public Admin(String nombre, String mail, String pass){
         this.nombre = nombre;
-        this.dni = dni
+        this.mail = mail;
+        this.pass = pass;
     }
 
     public void modificarSaldo(Cuenta c, double nuevoSaldo){

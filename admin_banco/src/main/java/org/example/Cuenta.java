@@ -7,13 +7,13 @@ public class Cuenta {
     public String tipoCuenta;
     public double saldo;
     public boolean activo = true;
+    public String rol;
 
     public void mostrarInfo(){
         if(activo)
             System.out.println("Nombre: " + nombre + " Direccion-: " + direccion + " Cuenta: " + tipoCuenta + " Saldo: $" + saldo);
         else
             System.out.println("Esta cuenta no se encuentra activa");
-
     }
 
     public void tranferir(Cuenta c, int monto){

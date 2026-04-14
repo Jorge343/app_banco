@@ -7,8 +7,12 @@ public class Main {
 
         Director director = new Director();
         CuentaBuilder builder = new CuentaBuilder();
-        Admin admin = new Admin("Hector");
+        Admin admin = new Admin("Hector", 1);
 
+
+        InterfazMenu interfazMenu = new InterfazMenu();
+        interfazMenu.iniciar();
+        /*
         director.constructCuentaAhorro(builder, "Juan", "Monteagudo 111");
         Cuenta cuenta1 = builder.getCuenta();
 
@@ -25,5 +29,8 @@ public class Main {
 
         admin.cambiarCuenta(cuenta1);
         cuenta1.mostrarInfo();
+        cuenta1.tranferir(cuenta2, 1);
+        */
+
     }
 }

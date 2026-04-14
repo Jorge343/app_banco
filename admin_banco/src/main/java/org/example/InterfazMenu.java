@@ -7,7 +7,7 @@ public class InterfazMenu {
     private Scanner sc = new Scanner(System.in);
     Director director = new Director();
     CuentaBuilder builder = new CuentaBuilder();
-    Admin admin = new Admin("Hector");
+    Admin admin = new Admin("Hector", 1);
 
     private ArrayList<Cuenta> listaCuenta = new ArrayList<>();
 
@@ -16,7 +16,7 @@ public class InterfazMenu {
         while(opcion != 5){
             imprimirMenu();
             opcion = sc.nextInt();
-            opciones();
+            opciones(opcion);
         }
     }
     private void imprimirMenu(){
@@ -37,7 +37,20 @@ public class InterfazMenu {
                 String nombre = sc.nextLine();
                 System.out.println("Ingrese direccion");
                 String direc = sc.nextLine();
-                System.out.println("Ingrese tipo de cuenta");
+                System.out.println("Ingrese tipo de cuenta \\ 1. Ahorro   2. Corriente");
+                int optipo = sc.nextInt();
+                if (optipo == 1 || optipo == 2){
+                    if (optipo == 1)
+                        director.constructCuentaAhorro(builder, nombre, direc);
+                    else
+                        director.constructCuentaCorriente(builder, nombre, direc);
+                }
+                else
+                    System.out.println("Opcion Incorrecta");
+
+                break;
+
+
 
 
         }
