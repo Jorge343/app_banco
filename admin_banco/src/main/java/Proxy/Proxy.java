@@ -1,5 +1,7 @@
-package org.example;
+package Proxy;
 
+
+import Banco.Cuenta;
 
 import java.util.ArrayList;
 

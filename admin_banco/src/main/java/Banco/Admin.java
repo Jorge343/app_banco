@@ -1,4 +1,4 @@
-package org.example;
+package Banco;
 
 public class Admin {
     private String nombre;

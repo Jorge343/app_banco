@@ -1,4 +1,7 @@
-package org.example;
+package Banco;
+
+import Builder.BuilderCuenta;
+import Builder.Director;
 
 import java.util.ArrayList;
 
@@ -6,7 +9,7 @@ public class Banco {
     public int sucursal;
     public ArrayList<Cuenta> personas = new ArrayList<>();
     Director director = new Director();
-    CuentaBuilder builder = new CuentaBuilder();
+    BuilderCuenta builder = new BuilderCuenta();
 
 
     public Banco (int sucursal){

@@ -1,10 +1,7 @@
-package org.example;
+package Banco;
 
-enum Rol {
-    ADMIN, CLIENTE
-}
+
 public class Cuenta {
-
 
     public String nombre;
     public String direccion;
@@ -33,45 +30,7 @@ public class Cuenta {
 
 
 }
-interface Builder{
-    void reset();
-    void setNombre(String nombre);
-    void setDireccion(String direccion);
-    void setTipo (String tipo);
-    void setRol (Rol rol);
-    void setPass (String pass);
-}
 
-class CuentaBuilder implements Builder {
-    private  Cuenta cuenta;
-
-    public CuentaBuilder(){
-        this.reset();
-    }
-    public void reset(){
-        this.cuenta = new Cuenta();
-    }
-    public void setNombre (String nombre){
-        this.cuenta.nombre = nombre;
-    }
-    public void setDireccion (String direccion){
-        this.cuenta.direccion = direccion;
-    }
-    public void setTipo (String tipo){
-        this.cuenta.tipoCuenta = tipo;
-    }
-    public void setRol (Rol rol){
-        this.cuenta.rol = rol;
-    }
-    public void setPass (String pass){
-        this.cuenta.password = pass;
-    }
-    public Cuenta getCuenta(){
-        Cuenta cuenta = this.cuenta;
-        this.reset();
-        return cuenta;
-    }
-}
 
 
 

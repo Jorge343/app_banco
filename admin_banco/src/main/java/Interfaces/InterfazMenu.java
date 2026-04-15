@@ -1,6 +1,12 @@
-package org.example;
+package Interfaces;
+import Banco.Banco;
+import Banco.Cuenta;
+import Builder.BuilderCuenta;
+import Builder.Director;
+import Proxy.Proxy;
+
+
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class InterfazMenu {
 
@@ -8,7 +14,7 @@ public class InterfazMenu {
     private Proxy proxy;
     private Scanner sc = new Scanner(System.in);
     Director director = new Director();
-    CuentaBuilder builder = new CuentaBuilder();
+    BuilderCuenta builder = new BuilderCuenta();
     //Admin admin = new Admin("Hector", 1);
 
     //private ArrayList<Cuenta> listaCuenta = new ArrayList<>();
