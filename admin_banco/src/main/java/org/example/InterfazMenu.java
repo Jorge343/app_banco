@@ -7,7 +7,7 @@ public class InterfazMenu {
     private Scanner sc = new Scanner(System.in);
     Director director = new Director();
     CuentaBuilder builder = new CuentaBuilder();
-    Admin admin = new Admin("Hector", 1);
+    //Admin admin = new Admin("Hector", 1);
 
     private ArrayList<Cuenta> listaCuenta = new ArrayList<>();
 

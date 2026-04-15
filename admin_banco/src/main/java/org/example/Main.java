@@ -5,9 +5,9 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
 
-        Director director = new Director();
-        CuentaBuilder builder = new CuentaBuilder();
-        Admin admin = new Admin("Hector", 1);
+        //Director director = new Director();
+        //CuentaBuilder builder = new CuentaBuilder();
+        //Admin admin = new Admin("Hector", 1);
 
 
         InterfazMenu interfazMenu = new InterfazMenu();

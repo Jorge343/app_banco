@@ -1,3 +1,21 @@
 package org.example;
 
 
+import java.util.ArrayList;
+
+public class Proxy{
+    private ArrayList<Cuenta> cuentas;
+
+
+    public Proxy(ArrayList<Cuenta> listaBanco){
+        this.cuentas = listaBanco;
+    }
+
+    public Cuenta autenticacion(String nombre, String pass){
+        for(Cuenta c : cuentas){
+            if (c.nombre == nombre && c.password == pass)
+                return c;
+        }
+        return null;
+    }
+}

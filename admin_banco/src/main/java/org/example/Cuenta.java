@@ -1,14 +1,15 @@
 package org.example;
 
-public enum Rol {
+enum Rol {
     ADMIN, CLIENTE
 }
-
 public class Cuenta {
+
 
     public String nombre;
     public String direccion;
     public String tipoCuenta;
+    public String password;
     public double saldo;
     public boolean activo = true;
     public Rol rol;
@@ -38,6 +39,7 @@ interface Builder{
     void setDireccion(String direccion);
     void setTipo (String tipo);
     void setRol (Rol rol);
+    void setPass (String pass);
 }
 
 class CuentaBuilder implements Builder {
@@ -60,6 +62,9 @@ class CuentaBuilder implements Builder {
     }
     public void setRol (Rol rol){
         this.cuenta.rol = rol;
+    }
+    public void setPass (String pass){
+        this.cuenta.password = pass;
     }
     public Cuenta getCuenta(){
         Cuenta cuenta = this.cuenta;

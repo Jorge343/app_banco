@@ -5,10 +5,16 @@ import java.util.ArrayList;
 public class Banco {
     public int sucursal;
     public ArrayList<Cuenta> personas = new ArrayList<>();
+    Director director = new Director();
+    CuentaBuilder builder = new CuentaBuilder();
+
 
     public Banco (int sucursal){
         this.sucursal = sucursal;
-        personas.add(new Cuenta("Abel", "aa", "2", "ADMIN" ))
+        //personas.add(admin1);
+        director.constructCuentaAdmin(builder, "aa", "aa");
+        Cuenta admin = builder.getCuenta();
+        personas.add(admin);
     }
 
     public void añadirCuenta(Cuenta c){
