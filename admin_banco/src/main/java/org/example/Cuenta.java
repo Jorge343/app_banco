@@ -1,5 +1,9 @@
 package org.example;
 
+public enum Rol {
+    ADMIN, CLIENTE
+}
+
 public class Cuenta {
 
     public String nombre;
@@ -7,7 +11,7 @@ public class Cuenta {
     public String tipoCuenta;
     public double saldo;
     public boolean activo = true;
-    public String rol;
+    public Rol rol;
 
     public void mostrarInfo(){
         if(activo)
@@ -33,6 +37,7 @@ interface Builder{
     void setNombre(String nombre);
     void setDireccion(String direccion);
     void setTipo (String tipo);
+    void setRol (Rol rol);
 }
 
 class CuentaBuilder implements Builder {
@@ -52,6 +57,9 @@ class CuentaBuilder implements Builder {
     }
     public void setTipo (String tipo){
         this.cuenta.tipoCuenta = tipo;
+    }
+    public void setRol (Rol rol){
+        this.cuenta.rol = rol;
     }
     public Cuenta getCuenta(){
         Cuenta cuenta = this.cuenta;

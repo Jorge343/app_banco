@@ -5,8 +5,16 @@ import java.util.ArrayList;
 public class Banco {
     public int sucursal;
     public ArrayList<Cuenta> personas = new ArrayList<>();
-    Admin admin = new Admin("Abel", "abel", "123");
 
+    public Banco (int sucursal){
+        this.sucursal = sucursal;
+        personas.add(new Cuenta("Abel", "aa", "2", "ADMIN" ))
+    }
+
+    public void añadirCuenta(Cuenta c){
+        personas.add(c);
+        System.out.println("Usuario " + c.nombre + " registrado exitosamente");
+    }
 
     public void mostrarBalance(){
         double saldoPersona;
