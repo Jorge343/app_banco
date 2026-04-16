@@ -1,4 +1,4 @@
-package Interfaces;
+package Paneles;
 import Banco.Banco;
 import Banco.Cuenta;
 import Builder.BuilderCuenta;
