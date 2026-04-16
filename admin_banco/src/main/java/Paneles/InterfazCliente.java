@@ -9,7 +9,6 @@ public class InterfazCliente {
     public void panelCliente(Cuenta cuenta, Banco banco){
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
-        InterfazMenu menu = new InterfazMenu();
 
         while(opcion != 3){
 
@@ -51,7 +50,6 @@ public class InterfazCliente {
                     break;
 
                 case 3:
-                    menu.iniciar();
                     break;
 
                 default:

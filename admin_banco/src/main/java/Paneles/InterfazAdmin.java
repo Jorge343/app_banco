@@ -9,7 +9,6 @@ public class InterfazAdmin {
 
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
-        InterfazMenu menu = new InterfazMenu();
 
         while(opcion != 3){
 
@@ -51,7 +50,6 @@ public class InterfazAdmin {
                     }
                     break;
                 case 4:
-                    menu.iniciar();
                     break;
                 default:
                     System.out.println("Opcion invalida, intente nuevamente");
