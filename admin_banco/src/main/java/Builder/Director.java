@@ -1,5 +1,4 @@
 package Builder;
-import Banco.Cuenta;
 import Banco.Rol;
 
 

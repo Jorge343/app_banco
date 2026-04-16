@@ -1,5 +1,4 @@
 package Builder;
-
 import Banco.Rol;
 
 interface Builder{
@@ -9,5 +8,4 @@ interface Builder{
     void setTipo (String tipo);
     void setRol (Rol rol);
     void setPass (String pass);
-
 }

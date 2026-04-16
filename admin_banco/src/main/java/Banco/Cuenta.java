@@ -27,8 +27,6 @@ public class Cuenta {
         else
             System.out.println("Saldo insuficiente para realizar esta operación o cuenta inactiva");
     }
-
-
 }
 
 

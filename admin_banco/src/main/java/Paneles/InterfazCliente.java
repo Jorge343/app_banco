@@ -1,7 +1,6 @@
 package Paneles;
 import Banco.Cuenta;
 import Banco.Banco;
-
 import java.util.Scanner;
 
 public class InterfazCliente {
@@ -23,13 +22,16 @@ public class InterfazCliente {
 
             switch (opcion){
                 case 1:
+
                     String destinatario;
                     int monto;
                     boolean transferir = false;
+
                     System.out.println("Ingrese el monto a transferir");
                     monto = sc.nextInt();
                     System.out.println("Escriba el nombre de la cuenta a la que desea tranferir");
                     destinatario = sc.nextLine();
+
                     for (Cuenta c : banco.personas){
                         if (c.nombre.equals(destinatario)) {
                             transferir = true;
@@ -42,18 +44,20 @@ public class InterfazCliente {
                         System.out.println("Cuenta no encontrada, intente nuevamente");
                     sc.nextLine();
                     break;
+
                 case 2:
                     System.out.println("Su saldo actual es de $" + cuenta.saldo);
                     sc.nextLine();
                     break;
+
                 case 3:
                     menu.iniciar();
                     break;
+
                 default:
                     System.out.println("Opcion invalida, intente nuevamente");
                     break;
             }
         }
-
     }
 }

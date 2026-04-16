@@ -4,9 +4,8 @@ import Banco.Cuenta;
 import Builder.BuilderCuenta;
 import Builder.Director;
 import Proxy.Proxy;
-
-
 import java.util.Scanner;
+
 
 public class InterfazMenu {
 
@@ -17,9 +16,7 @@ public class InterfazMenu {
     BuilderCuenta builder = new BuilderCuenta();
     InterfazCliente interfazCliente = new InterfazCliente();
     InterfazAdmin interfazAdmin = new InterfazAdmin();
-    //Admin admin = new Admin("Hector", 1);
 
-    //private ArrayList<Cuenta> listaCuenta = new ArrayList<>();
 
     public void iniciar(){
         int opcion = 0;
@@ -31,6 +28,7 @@ public class InterfazMenu {
         }
     }
     private void imprimirMenu(){
+
         System.out.println("\\--- APP BANCO ---");
         System.out.println("1. Crear cuenta");
         System.out.println("2. Loguearse");
@@ -41,6 +39,7 @@ public class InterfazMenu {
     private void opciones(int opcion){
         switch (opcion){
             case 1:
+
                 System.out.println("Ingrese nombre");
                 String nombre = sc.nextLine();
                 System.out.println("Ingrese direccion");
@@ -49,6 +48,7 @@ public class InterfazMenu {
                 String pass = sc.nextLine();
                 System.out.println("Ingrese tipo de cuenta \\ 1. Ahorro   2. Corriente");
                 int optipo = sc.nextInt();
+
                 if (optipo == 1 || optipo == 2){
                     if (optipo == 1){
                         director.constructCuentaAhorro(builder, nombre, direc, pass);
@@ -66,12 +66,15 @@ public class InterfazMenu {
                 else
                     System.out.println("Opcion Incorrecta");
                 break;
+
             case 2:
+
                 System.out.println("Ingrese usuario");
                 String usuario = sc.nextLine();
                 System.out.println("Ingrese contraseña");
                 String password = sc.nextLine();
                 Cuenta sesionactual = proxy.autenticacion(usuario, password);
+
                 if (sesionactual != null){
                     switch (sesionactual.rol){
                         case CLIENTE:
@@ -79,17 +82,10 @@ public class InterfazMenu {
                             break;
                         case ADMIN:
                             interfazAdmin.panelAdmin(sesionactual, banco);
+                            break;
                     }
                 }
-
-
-
-
         }
-
     }
-
-
-
 }
 

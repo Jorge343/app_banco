@@ -1,8 +1,6 @@
 package Banco;
-
 import Builder.BuilderCuenta;
 import Builder.Director;
-
 import java.util.ArrayList;
 
 public class Banco {

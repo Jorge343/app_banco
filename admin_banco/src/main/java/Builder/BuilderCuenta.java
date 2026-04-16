@@ -1,9 +1,6 @@
 package Builder;
-
 import Banco.Cuenta;
 import Banco.Rol;
-
-
 
 public class BuilderCuenta implements Builder{
 
