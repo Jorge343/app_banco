@@ -21,11 +21,12 @@ public class Director {
         builder.setPass(pass);
     }
 
-    public void constructCuentaAdmin(Builder builder, String nombre, String direccion){
+    public void constructCuentaAdmin(Builder builder, String nombre, String direccion, String pass){
         builder.reset();
         builder.setNombre(nombre);
         builder.setDireccion(direccion);
         builder.setRol(Rol.ADMIN);
+        builder.setPass(pass);
     }
 
 }

@@ -28,20 +28,19 @@ public class InterfazCliente {
 
                     System.out.println("Ingrese el monto a transferir");
                     monto = sc.nextInt();
+                    sc.nextLine();
+
                     System.out.println("Escriba el nombre de la cuenta a la que desea tranferir");
                     destinatario = sc.nextLine();
 
                     for (Cuenta c : banco.personas){
                         if (c.nombre.equals(destinatario)) {
                             transferir = true;
-                            System.out.println("Ingrese el monto");
-                            monto = sc.nextInt();
                             cuenta.tranferir(c, monto);
                         }
                     }
                     if (!transferir)
                         System.out.println("Cuenta no encontrada, intente nuevamente");
-                    sc.nextLine();
                     break;
 
                 case 2:

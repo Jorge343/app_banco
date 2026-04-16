@@ -10,7 +10,7 @@ public class InterfazAdmin {
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
 
-        while(opcion != 3){
+        while(opcion != 4){
 
             System.out.println("Bienvenido " + cuenta.nombre + " a la sucursal " + banco.sucursal);
             System.out.println("1. Modificar saldo");
@@ -19,11 +19,13 @@ public class InterfazAdmin {
             System.out.println("4. Salir");
             System.out.println("Seleccione una opción");
             opcion = sc.nextInt();
+            sc.nextLine();
 
             switch (opcion){
                 case 1:
                     System.out.print("Nombre de la cuenta: ");
                     String nombreSaldo = sc.nextLine();
+                    sc.nextLine();
                     Cuenta cSaldo = buscarCuenta(nombreSaldo, banco);
                     if(cSaldo != null){
                         System.out.print("Ingrese el nuevo saldo de la cuenta: ");
@@ -57,8 +59,8 @@ public class InterfazAdmin {
                     break;
             }
         }
-
     }
+
     public void modificarSaldo(Cuenta c, double nuevoSaldo){
         if (c.activo){
             c.saldo = nuevoSaldo;

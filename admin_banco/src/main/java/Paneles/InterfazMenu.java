@@ -17,13 +17,19 @@ public class InterfazMenu {
     InterfazCliente interfazCliente = new InterfazCliente();
     InterfazAdmin interfazAdmin = new InterfazAdmin();
 
+    public InterfazMenu (Banco banco, Proxy proxy){
+        this.banco = banco;
+        this.proxy = proxy;
+    }
+
 
     public void iniciar(){
         int opcion = 0;
 
-        while(opcion != 5){
+        while(opcion != 3){
             imprimirMenu();
             opcion = sc.nextInt();
+            sc.nextLine();
             opciones(opcion);
         }
     }
@@ -85,6 +91,15 @@ public class InterfazMenu {
                             break;
                     }
                 }
+                else
+                    System.out.println("Sesion invalida.");
+                break;
+            case 3:
+                System.out.println("Saliendo...");
+                break;
+            default:
+                System.out.println("Opcion invalida, intente nuevamente");
+
         }
     }
 }

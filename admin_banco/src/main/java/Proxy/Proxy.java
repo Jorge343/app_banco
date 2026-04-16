@@ -15,7 +15,7 @@ public class Proxy{
 
     public Cuenta autenticacion(String nombre, String pass){
         for(Cuenta c : cuentas){
-            if (c.nombre == nombre && c.password == pass)
+            if (c.nombre.equals(nombre) && c.password.equals(pass))
                 return c;
         }
         return null;
