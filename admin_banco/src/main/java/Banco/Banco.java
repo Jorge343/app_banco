@@ -12,10 +12,10 @@ public class Banco {
     BuilderCuenta builder = new BuilderCuenta();
 
 
-    public Banco (int sucursal){
+    public Banco (int sucursal, String nombreAdm, String direcAdm){
         this.sucursal = sucursal;
         //personas.add(admin1);
-        director.constructCuentaAdmin(builder, "aa", "aa");
+        director.constructCuentaAdmin(builder, nombreAdm, direcAdm);
         Cuenta admin = builder.getCuenta();
         personas.add(admin);
     }

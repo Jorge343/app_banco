@@ -16,6 +16,7 @@ public class InterfazMenu {
     Director director = new Director();
     BuilderCuenta builder = new BuilderCuenta();
     InterfazCliente interfazCliente = new InterfazCliente();
+    InterfazAdmin interfazAdmin = new InterfazAdmin();
     //Admin admin = new Admin("Hector", 1);
 
     //private ArrayList<Cuenta> listaCuenta = new ArrayList<>();
@@ -73,9 +74,11 @@ public class InterfazMenu {
                 Cuenta sesionactual = proxy.autenticacion(usuario, password);
                 if (sesionactual != null){
                     switch (sesionactual.rol){
-                        case (CLIENTE):
+                        case CLIENTE:
                             interfazCliente.panelCliente(sesionactual, banco);
                             break;
+                        case ADMIN:
+                            interfazAdmin.panelAdmin(sesionactual, banco);
                     }
                 }
 
