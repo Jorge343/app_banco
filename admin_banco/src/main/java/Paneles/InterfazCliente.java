@@ -48,8 +48,10 @@ public class InterfazCliente {
                     break;
                 case 3:
                     menu.iniciar();
+                    break;
                 default:
                     System.out.println("Opcion invalida, intente nuevamente");
+                    break;
             }
         }
 

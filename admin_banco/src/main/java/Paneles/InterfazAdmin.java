@@ -52,9 +52,11 @@ public class InterfazAdmin {
                     break;
                 case 4:
                     menu.iniciar();
+                    break;
                 default:
                     System.out.println("Opcion invalida, intente nuevamente");
                     sc.nextLine();
+                    break;
             }
         }
 
