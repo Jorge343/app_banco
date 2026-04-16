@@ -15,6 +15,7 @@ public class InterfazMenu {
     private Scanner sc = new Scanner(System.in);
     Director director = new Director();
     BuilderCuenta builder = new BuilderCuenta();
+    InterfazCliente interfazCliente = new InterfazCliente();
     //Admin admin = new Admin("Hector", 1);
 
     //private ArrayList<Cuenta> listaCuenta = new ArrayList<>();
@@ -73,7 +74,8 @@ public class InterfazMenu {
                 if (sesionactual != null){
                     switch (sesionactual.rol){
                         case (CLIENTE):
-
+                            interfazCliente.panelCliente(sesionactual, banco);
+                            break;
                     }
                 }
 
